@@ -1,0 +1,17 @@
+name: ukor-sample-project
+version: 0.0.1
+buildDir: build
+sourceDir: src
+defaults:
+  flavor: main
+rokus: 
+  mine:
+    serial: 'YT008F231925'
+    auth: {
+      user: 'rokudev',
+      pass: 'Password12'
+    }
+flavors:
+  main:
+    src:
+      - main

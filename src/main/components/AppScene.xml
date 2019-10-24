@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd"
+  name="AppScene"
+  extends="Scene"
+  initialFocus="alRect">
+	<script type="text/brightscript" uri="pkg:/components/AppScene.brs"/>
+  <children>
+    <ApiTask id="apiTask" />
+    <MarkupList id="alRect" translation="[100, 100]" itemComponentName="DivisionItem"
+    itemSize="[720, 300]"
+     itemSpacing="[0,12]" 
+     numRows="20" vertFocusAnimationStyle="floatingFocus"
+     focusFootprintBitmapUri="invalid"/>
+    <MarkupList id="nlRect" translation="[960, 100]" itemComponentName="DivisionItem" 
+    itemSize="[720, 300]"
+     itemSpacing="[0,12]" 
+     numRows="20" vertFocusAnimationStyle="floatingFocus" focusFootprintBitmapUri="invalid"/>
+     <Group visible="false" id="divisionGroup">
+      <Rectangle width="1920" height="1080" color="0xFFFFFFFF"/>
+      <DivisionItem width="1720" id="divisionView"/>
+
+     </Group>
+  </children>
+</component>

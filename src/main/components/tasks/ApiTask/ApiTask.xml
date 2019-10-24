@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name = "ApiTask" extends = "Task" >
+
+  <interface>
+    <field id = "data" type = "Node" />
+  </interface>
+
+  <script type = "text/brightscript" uri="pkg:/source/requestHelper.brs" />
+  <script type = "text/brightscript" uri="pkg:/components/tasks/ApiTask/ApiTask.brs" />
+
+</component>

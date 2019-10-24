@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd"
+  name="DivisionItem"
+  extends="LayoutGroup">
+  <interface>
+    <field id="itemContent" type="Node"/>
+    <field id="width" type="int" value="720"/>
+  </interface>
+	<script type="text/brightscript" uri="pkg:/components/DivisionItem/DivisionItem.brs"/>
+  <children>
+    <Label id="divisionName" />
+    <TeamRow id="header" fontSize="24"/>
+  </children>
+</component>

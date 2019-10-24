@@ -1,0 +1,17 @@
+title=Ukor Sample Project
+
+major_version=0
+minor_version=1
+build_version=0
+
+
+splash_screen_fhd=pkg:/images/splash-screen.jpg
+splash_screen_hd=pkg:/images/splash-screen-hd.jpg
+splash_screen_sd=pkg:/images/splash-screen-sd.jpg
+
+ui_resolutions=fhd
+uri_resolution_autosub=#res#,hd,hd,fhd
+splash_rsg_optimization=1
+
+splash_color=#00000000
+splash_min_time=0

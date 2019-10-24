@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "no-stop": [
+      "warn"
+    ],
+    "no-print": [
+      "warn"
+    ],
+    "function-return-statement": [
+      "error"
+    ]
+  }
+}
