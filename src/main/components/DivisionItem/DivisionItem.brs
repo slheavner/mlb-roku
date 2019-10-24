@@ -4,7 +4,8 @@ sub init()
     team: "Team",
     wins: "Wins",
     losses: "Losses",
-    percentage: "Pct."
+    percentage: "Pct.",
+    gb: "GB"
   })
   m.top.findNode("header").itemContent = header
   m.top.layoutDirection = "vert"

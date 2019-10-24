@@ -7,9 +7,6 @@
     <field id="itemContent" type="Node"/>
     <field id="width" type="int" value="720"/>
     <field id="height" type="int"/>
-    <field id="index" type="int"/>
-    <field id="focusPercent" type="float"/>
-    <field id="listHasFocuse" type="boolean"/>
     <field id="fontSize" type="int"/>
   </interface>
 	<script type="text/brightscript" uri="pkg:/components/TeamRow/TeamRow.brs"/>
@@ -18,5 +15,6 @@
     <Label id="wins"  color="0x000000FF" />
     <Label id="losses"  color="0x000000FF"  />
     <Label id="percentage"  color="0x000000FF" />
+    <Label id="gb"  color="0x000000FF" horizAlign="right"/>
   </children>
 </component>

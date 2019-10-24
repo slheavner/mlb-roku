@@ -16,10 +16,6 @@
     itemSize="[720, 300]"
      itemSpacing="[0,12]" 
      numRows="20" vertFocusAnimationStyle="floatingFocus" focusFootprintBitmapUri="invalid"/>
-     <Group visible="false" id="divisionGroup">
-      <Rectangle width="1920" height="1080" color="0xFFFFFFFF"/>
-      <DivisionItem width="1720" id="divisionView"/>
-
-     </Group>
+     <DivisionScreen id="divisionScreen" visible="false"/>
   </children>
 </component>

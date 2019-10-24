@@ -69,6 +69,27 @@ function _buildContentNodes(json as object)
     child.title = team.team
     division.insertChild(child, _findInsertIndex(child.wins, division))
   end for
+  for each league in root.getChildren( - 1, 0)
+    for each div in league.getChildren( - 1, 0)
+      first = div.getChild(0)
+      first.addFields({
+        gb: "-",
+      })
+      for each team in div.getChildren( - 1, 0)
+        if team.gb = invalid then
+          win = first.wins - team.wins
+          loss = team.losses - first.losses
+          gb = (win + loss) / 2.0
+          if gb = fix(gb) then
+            gb = str(gb) + ".0"
+          end if
+          team.addFields({
+            gb: gb,
+          })
+        end if
+      end for
+    end for
+  end for
   m.top.data = root
 end function
 
