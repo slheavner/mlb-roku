@@ -13,5 +13,11 @@ ui_resolutions=fhd
 uri_resolution_autosub=#res#,hd,hd,fhd
 splash_rsg_optimization=1
 
+bsprof_data_dest=network
+bsprof_enable=1
+bsprof_enable_lines=1
+rsg_version=1.2
+bsprof_enable_mem=1
+
 splash_color=#00000000
 splash_min_time=0

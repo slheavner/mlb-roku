@@ -26,7 +26,7 @@ end sub
 
 sub onWidthChange()
   w = m.top.width
-  textWidth = (w - 20) * 0.2
+  textWidth = w * 0.2
   m.team.width = textWidth * 1.4
   m.wins.width = textWidth
   m.losses.width = textWidth

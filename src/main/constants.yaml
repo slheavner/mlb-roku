@@ -10,5 +10,8 @@ strings:
 api:
   url: https://api.mobileqa.mlbinfra.com/api/interview/v1/records 
 colors:
+  black: '0xEBEBEB'
+  white: '0xEBEBEB'
   text:
-    default: '0x000000FF'
+    dark: '0x141414'
+    light: '0xEBEBEB'

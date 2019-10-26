@@ -1,61 +1,60 @@
 <?rokuml version="1.0" encoding="utf-8" ?>
 <!--********** Copyright 2019 Roku Corp. All Rights Reserved. **********-->
 
-<component name="TrackerTask" extends="Task">
+<component
+        name="TrackerTask"
+        extends="Task">
 
-  <interface>
-      <field id="event" type="assocarray"/>
-      <field id="isExternallyExposed" type="boolean" value="true"/>
+    <interface>
+        <field
+                id="event"
+                type="assocarray" />
+        <field
+                id="isExternallyExposed"
+                type="boolean"
+                value="true" />
 
-      <function name="UIThread_init"/>
-      <function name="UIThread_showSelectorView"/>
-      <function name="UIThread_hideSelectorView"/>
+        <function name="UIThread_init" />
+        <function name="UIThread_showSelectorView" />
+        <function name="UIThread_hideSelectorView" />
 
-      <function name="UIThread_selectNode"/>
-      <function name="UIThread_updateNode"/>
-      <function name="UIThread_getNodeData"/>
+        <function name="UIThread_selectNode" />
+        <function name="UIThread_updateNode" />
+        <function name="UIThread_getNodeData" />
 
-      <function name="UIThread_getItemList"/>
-      <function name="UIThread_getNodeTree"/>
-      <function name="UIThread_getNodeById"/>
-      <function name="UIThread_getNodeByName"/>
+        <function name="UIThread_getItemList" />
+        <function name="UIThread_getNodeTree" />
+        <function name="UIThread_getNodeById" />
+        <function name="UIThread_getNodeByName" />
 
-      <function name="UIThread_addChild"/>
-      <function name="UIThread_removeChild"/>
-      <function name="UIThread_moveChild"/>
+        <function name="UIThread_addChild" />
+        <function name="UIThread_removeChild" />
+        <function name="UIThread_moveChild" />
 
-      <function name="UIThread_setField"/>
-      <function name="UIThread_removeField"/>
+        <function name="UIThread_setField" />
+        <function name="UIThread_removeField" />
 
-      <function name="UIThread_setFocus"/>
-      <function name="UIThread_selectFocusedNode"/>
+        <function name="UIThread_setFocus" />
+        <function name="UIThread_selectFocusedNode" />
 
-      <function name="UIThread_setBoundingRect"/>
+        <function name="UIThread_setBoundingRect" />
 
-      <function name="UIThread_getRegistrySections"/>
-      <function name="UIThread_clearRegistry"/>
-      <function name="UIThread_addRegistrySection"/>
-      <function name="UIThread_removeRegistrySection"/>
-      <function name="UIThread_addRegistryField"/>
-      <function name="UIThread_removeRegistryField"/>
-      <function name="UIThread_editRegistryField"/>
+        <function name="UIThread_getRegistrySections" />
+        <function name="UIThread_clearRegistry" />
+        <function name="UIThread_addRegistrySection" />
+        <function name="UIThread_removeRegistrySection" />
+        <function name="UIThread_addRegistryField" />
+        <function name="UIThread_removeRegistryField" />
+        <function name="UIThread_editRegistryField" />
 
-      <function name="UIThread_log"/>
-      <function name="UIThread_setLogVerbosity"/>
-      <function name="UIThread_setLogFormat"/>
-  </interface>
+        <function name="UIThread_log" />
+        <function name="UIThread_setLogVerbosity" />
+        <function name="UIThread_setLogFormat" />
+    </interface>
 
-    
-    
-    
-    
-    
-    
-    
 
- 
-<script type = "text/brightscript" >
-<![CDATA[
+    <script type="text/brightscript">
+        <![CDATA[
 
 ' RALE_Config - RALE config singleton class
 ' @return {object} - RALE config properties
@@ -472,25 +471,25 @@ Sub SelectorView_UpdateView(event)
     bottomLine.translation = [(width - border) / 2, height + border]
 
     leftCords = node.childrenMap.leftCords
-    leftCords.font.size = 20
+    leftCords.fontSize = 20
     leftCords.color = "#FF0000"
     leftCords.text = NumberToFixed(x, 0)
     leftCords.translation = [-x/2 - 10, (height - border) / 2 - 20]
 
     topCords = node.childrenMap.topCords
-    topCords.font.size = 20
+    topCords.fontSize = 20
     topCords.color = "#FF0000"
     topCords.text = NumberToFixed(y, 0)
     topCords.translation = [(width - border) / 2 + 10, -y/2 - 10]
 
     rightCords = node.childrenMap.rightCords
-    rightCords.font.size = 20
+    rightCords.fontSize = 20
     rightCords.color = "#FF0000"
     rightCords.text = NumberToFixed(m.resWidth - x - width, 0)
     rightCords.translation = [width + (m.resWidth - rightPos)/2 - 5, (height - border) / 2 - 20]
 
     bottomCords = node.childrenMap.bottomCords
-    bottomCords.font.size = 20
+    bottomCords.fontSize = 20
     bottomCords.color = "#FF0000"
     bottomCords.text = NumberToFixed(m.resHeight - y - height, 0)
     bottomCords.translation = [(width - border) / 2 + 10, height + (m.resHeight - bottomPos)/2 - 5]
@@ -2617,5 +2616,5 @@ Function RALE_ErrorLog(message as String)
 End Function
 
 ]]>
-</script>
+    </script>
 </component>

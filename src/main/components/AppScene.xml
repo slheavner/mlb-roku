@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<component
+		name="AppScene"
+		extends="Scene"
+		initialFocus="alRect">
+	<script
+			type="text/brightscript"
+			uri="pkg:/components/AppScene.brs" />
+	<children>
+		<Poster
+				id="bg"
+				width="1920"
+				height="1080"
+				uri="pkg:/images/bggradient.jpg"
+				blendColor="@{colors.text.dark}" />
+		<ApiTask id="apiTask" />
 
-<component xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd"
-  name="AppScene"
-  extends="Scene"
-  initialFocus="alRect">
-	<script type="text/brightscript" uri="pkg:/components/AppScene.brs"/>
-  <children>
-    <ApiTask id="apiTask" />
-    <MarkupList id="alRect" translation="[100, 100]" itemComponentName="DivisionItem"
-    itemSize="[720, 300]"
-     itemSpacing="[0,12]" 
-     numRows="20" vertFocusAnimationStyle="floatingFocus"
-     focusFootprintBitmapUri="invalid"/>
-    <MarkupList id="nlRect" translation="[960, 100]" itemComponentName="DivisionItem" 
-    itemSize="[720, 300]"
-     itemSpacing="[0,12]" 
-     numRows="20" vertFocusAnimationStyle="floatingFocus" focusFootprintBitmapUri="invalid"/>
-     <DivisionScreen id="divisionScreen" visible="false"/>
-  </children>
+		<Poster
+				uri="pkg:/images/selector_wt.9.png"
+				translation="[100, 100]"
+				blendColor="0x002D72"
+				height="900"
+				width="780">
+			<SimpleLabel
+					text="AMERICAN LEAGUE"
+					translation="[390, 30]"
+					horizOrigin="center"
+					vertOrigin="center"
+					fontUri="font:LargeBoldSystemFont"
+					color="@{colors.black}" />
+			<MarkupList
+					id="alRect"
+					translation="[30, 69]"
+					itemComponentName="DivisionItem"
+					itemSize="[720, 250]"
+					itemSpacing="[0,24]"
+					focusBitmapBlendColor="0x00000066"
+					numRows="20"
+					focusBitmapUri="pkg:/images/selector_wt.9.png"
+					vertFocusAnimationStyle="floatingFocus"
+					focusFootprintBitmapUri="pkg:/" />
+		</Poster>
+		<Poster
+				uri="pkg:/images/selector_wt.9.png"
+				translation="[960, 100]"
+				blendColor="0xD50032"
+				height="900"
+				width="780">
+			<SimpleLabel
+					text="NATIONAL LEAGUE"
+					translation="[390, 30]"
+					horizOrigin="center"
+					vertOrigin="center"
+					fontUri="font:LargeBoldSystemFont"
+					color="@{colors.black}" />
+			<MarkupList
+					id="nlRect"
+					focusBitmapBlendColor="0x00000066"
+					itemComponentName="DivisionItem"
+					itemSize="[720, 250]"
+					translation="[30, 69]"
+					numRows="20"
+					itemSpacing="[0,24]"
+					focusBitmapUri="pkg:/images/selector_wt.9.png"
+					vertFocusAnimationStyle="floatingFocus"
+					focusFootprintBitmapUri="pkg:/" />
+		</Poster>
+		<DivisionScreen
+				id="divisionScreen"
+				visible="false" />
+	</children>
 </component>

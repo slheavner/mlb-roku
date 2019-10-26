@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd"
-  name="DivisionScreen"
-  extends="Group">
+<component
+    name="DivisionScreen"
+    extends="Group">
   <interface>
-    <field id="itemContent" type="Node"/>
-    <field id="index" type="int" value="-1"/>
+    <field
+        id="itemContent"
+        type="Node" />
+    <field
+        id="index"
+        type="int"
+        value="-1" />
   </interface>
-	<script type="text/brightscript" uri="pkg:/components/DivisionScreen/DivisionScreen.brs"/>
+  <script
+      type="text/brightscript"
+      uri="pkg:/components/DivisionScreen/DivisionScreen.brs" />
   <children>
-    <Rectangle width="1920" height="1080" color="0xFFFFFFFF"/>
-    <LayoutGroup translation="[960, 99]" layoutDirection="vert" id="list" horizAlignment="center">
+    <Rectangle
+        width="1920"
+        height="1080"
+        color="@{colors.text.dark}" />
+    <LayoutGroup
+        translation="[960, 99]"
+        layoutDirection="vert"
+        id="list"
+        horizAlignment="center">
       <LayoutGroup layoutDirection="horiz">
-          <Label text="&#60;" color="0x000000FF" width="30" height="198" vertAlign="center" font="font:MediumBoldSystemFont"/>
-          <Label id="divisionName" width="1440" horizAlign="center" height="198" color="0x000000FF" vertAlign="center" font="font:MediumBoldSystemFont"/>
-          <Label text="&#62;" color="0x000000FF" width="30" height="198" vertAlign="center" font="font:MediumBoldSystemFont"/>
+        <Label
+            text="&#60;"
+            color="@{colors.text.light}"
+            width="30"
+            height="198"
+            vertAlign="center"
+            font="font:MediumBoldSystemFont" />
+        <Label
+            id="divisionName"
+            width="1440"
+            horizAlign="center"
+            height="198"
+            color="@{colors.text.light}"
+            vertAlign="center"
+            font="font:MediumBoldSystemFont" />
+        <Label
+            text="&#62;"
+            color="@{colors.text.light}"
+            width="30"
+            height="198"
+            vertAlign="center"
+            font="font:MediumBoldSystemFont" />
       </LayoutGroup>
-      <TeamRow id="header" fontSize="36" width="1500" height="66"/>
-      <LayoutGroup id="teamGroup" layoutDirection="vert" horizAlignment="center"/>
+      <TeamRow
+          id="header"
+          fontSize="36"
+          width="1500"
+          height="66" />
+      <LayoutGroup
+          id="teamGroup"
+          layoutDirection="vert"
+          horizAlignment="center" />
     </LayoutGroup>
   </children>
 </component>
-

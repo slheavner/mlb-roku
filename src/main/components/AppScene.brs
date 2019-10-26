@@ -18,7 +18,7 @@ function onKeyEvent(key as string, press as boolean)
   else if key = "right" and press then
     m.nlRect.jumpToItem = m.alRect.itemFocused
     m.nlRect.setFocus(true)
-  else if key = "back" and press and m.top.hasFocus() = false then
+  else if key = "back" and press and m.divisionScreen.isInFocusChain() then
     index = m.divisionScreen.index
     if index < 3
       m.alRect.setFocus(true)
