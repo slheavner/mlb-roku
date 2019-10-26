@@ -1,5 +1,4 @@
 sub init()
-  m.tracker = m.top.createChild("TrackerTask")
   m.apiTask = m.top.findNode("apiTask")
   m.apiTask.observeField("data", "onApiData")
   m.divisionScreen = m.top.findNode("divisionScreen")

@@ -5,13 +5,21 @@ sourceDir: src
 defaults:
   flavor: main
 rokus: 
-  mine:
-    serial: 'YT008F231925'
-    auth: {
-      user: 'rokudev',
-      pass: 'Password12'
-    }
+  premiere:
+    serial: 'SERIAL123456'
+    auth: 
+      user: 'rokudev'
+      pass: 'yourpassword'
 flavors:
   main:
     src:
       - main
+  # adds the tracker task for the advanced layout editor
+  debug:
+    src: 
+      - main
+      - debug
+  test:
+    src: 
+      - main
+      - test

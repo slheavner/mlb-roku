@@ -1,17 +1,9 @@
-images:
-  selector: "pkg://assets/images/selector_wt.9.png"
-dimens:
-  grid:
-    position: "[190,50]"
-    basePosterSize: "[480,360]"
-    itemSpacing: "[50,50]"
 strings:
   requestorid: "1"
 api:
   url: https://api.mobileqa.mlbinfra.com/api/interview/v1/records 
 colors:
   black: '0xEBEBEB'
-  white: '0xEBEBEB'
   text:
     dark: '0x141414'
     light: '0xEBEBEB'

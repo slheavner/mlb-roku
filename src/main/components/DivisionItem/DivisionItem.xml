@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <component
-    name="DivisionItem"
-    extends="LayoutGroup">
-  <interface>
-    <field
-        id="itemContent"
-        type="Node" />
-    <field
-        id="width"
-        type="int"
-        value="720" />
-  </interface>
-  <script
-      type="text/brightscript"
-      uri="pkg:/components/DivisionItem/DivisionItem.brs" />
-  <children>
-    <Label
-        id="divisionName"
-        color="@{colors.black}"
-        font="font:MediumBoldSystemFont" />
-    <TeamRow
-        id="header"
-        fontSize="24" />
-  </children>
+        name="DivisionItem"
+        extends="LayoutGroup">
+    <interface>
+        <field
+                id="itemContent"
+                type="Node" />
+        <field
+                id="width"
+                type="int"
+                value="720" />
+    </interface>
+    <script
+            type="text/brightscript"
+            uri="pkg:/components/DivisionItem/DivisionItem.brs" />
+    <children>
+        <Label
+                id="divisionName"
+                color="@{colors.black}"
+                font="font:MediumBoldSystemFont" />
+        <TeamRow
+                id="header"
+                fontSize="24" />
+        <LayoutGroup
+                id="teams"
+                layoutDirection="vert">
+            <TeamRow />
+            <TeamRow />
+            <TeamRow />
+            <TeamRow />
+            <TeamRow />
+        </LayoutGroup>
+    </children>
 </component>

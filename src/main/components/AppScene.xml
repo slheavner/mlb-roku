@@ -18,7 +18,7 @@
 		<Poster
 				uri="pkg:/images/selector_wt.9.png"
 				translation="[100, 100]"
-				blendColor="0x002D72"
+				blendColor="0x142D72"
 				height="900"
 				width="780">
 			<SimpleLabel
@@ -34,7 +34,7 @@
 					itemComponentName="DivisionItem"
 					itemSize="[720, 250]"
 					itemSpacing="[0,24]"
-					focusBitmapBlendColor="0x00000066"
+					focusBitmapBlendColor="0x14141466"
 					numRows="20"
 					focusBitmapUri="pkg:/images/selector_wt.9.png"
 					vertFocusAnimationStyle="floatingFocus"
@@ -43,7 +43,7 @@
 		<Poster
 				uri="pkg:/images/selector_wt.9.png"
 				translation="[960, 100]"
-				blendColor="0xD50032"
+				blendColor="0xD51432"
 				height="900"
 				width="780">
 			<SimpleLabel

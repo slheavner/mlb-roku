@@ -32,6 +32,7 @@ function _doResponse(method as string, request as object, body, json, timeoutMil
   end if
   return invalid
 end function
+
 function _waitForUrlEvent(port, timeoutMillis, json) as object
   timer = CreateObject("roTimeSpan")
   timer.mark()
@@ -63,7 +64,7 @@ function _buildResponse(msg as object, json as boolean) as object
   response = {
     status: msg.getResponseCode(),
     statusString: msg.getFailureReason(),
-    body: msg,
+    body: msg.getString(),
     headers: msg.getResponseHeaders()
     json: invalid
   }

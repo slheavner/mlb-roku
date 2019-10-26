@@ -5,7 +5,14 @@ sub RunUserInterface(params as object)
   scene = screen.CreateScene("AppScene")
   screen.show()
 
-  checkForUnitTests(params)
+  ' if this is debug flavor, do any debug things
+  if type(debug) = "Function" then
+    debug(params, scene)
+  end if
+  ' if this is debug flavor, do any debug things
+  if type(test) = "Function" then
+    test(params, scene)
+  end if
 
   while(true)
     msg = wait(0, port)

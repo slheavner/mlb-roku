@@ -1,23 +1,18 @@
-title=Ukor Sample Project
+title=MLB 2018 Standings
 
-major_version=0
-minor_version=1
+major_version=1
+minor_version=0
 build_version=0
 
 
-splash_screen_fhd=pkg:/images/splash-screen.jpg
-splash_screen_hd=pkg:/images/splash-screen-hd.jpg
-splash_screen_sd=pkg:/images/splash-screen-sd.jpg
+splash_screen_fhd=pkg:/images/splash.jpg
+splash_screen_hd=pkg:/images/splash-720.jpg
+mm_icon_focus_hd=pkg:/images/icon.jpg
 
 ui_resolutions=fhd
-uri_resolution_autosub=#res#,hd,hd,fhd
 splash_rsg_optimization=1
 
-bsprof_data_dest=network
-bsprof_enable=1
-bsprof_enable_lines=1
 rsg_version=1.2
-bsprof_enable_mem=1
 
 splash_color=#00000000
 splash_min_time=0

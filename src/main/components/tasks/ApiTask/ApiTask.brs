@@ -2,19 +2,14 @@
 sub init()
   m.top.functionName = "getContent"
   m.url = "@{api.url}"
+
+  ' sort order for divisions
   m.divisionOrder = {
     "East": 0,
     "Central": 1
     "West": 2
   }
 end sub
-' {
-' "team": "KCR",
-' "wins": 58,
-' "losses": 104,
-' "league": "AL",
-' "division": "Central"
-' },
 
 sub getContent()
   request = newRequest(m.url)
@@ -22,6 +17,7 @@ sub getContent()
   _buildContentNodes(result.json)
 end sub
 
+' separate and sort divisions/teams into AL and NL nodes
 function _buildContentNodes(json as object)
   root = createObject("roSGNode", "ContentNode")
   root.id = "root"
@@ -29,6 +25,7 @@ function _buildContentNodes(json as object)
   al.id = "AL"
   nl = root.createChild("ContentNode")
   nl.id = "NL"
+  ' .findNode(id) doesn't work until they are part of a scene, use this map for easier traversal
   map = {
     "AL": {
       node: al,
@@ -76,6 +73,7 @@ function _buildContentNodes(json as object)
         gb: "-",
       })
       for each team in div.getChildren( - 1, 0)
+        ' calculate games back
         if team.gb = invalid then
           win = first.wins - team.wins
           loss = team.losses - first.losses
@@ -93,6 +91,7 @@ function _buildContentNodes(json as object)
   m.top.data = root
 end function
 
+' sort by wins
 function _findInsertIndex(wins, division)
   children = division.getChildren( - 1, 0)
   for i = 0 to children.count() - 1
@@ -103,11 +102,11 @@ function _findInsertIndex(wins, division)
   return children.count()
 end function
 
+' sort by custom order
 function _findDivisionInsertIndex(id, league)
   children = league.getChildren( - 1, 0)
   for i = 0 to children.count() - 1
     if m.divisionOrder[children[i].id] > m.divisionOrder[id] then
-      ? i
       return i
     end if
   end for

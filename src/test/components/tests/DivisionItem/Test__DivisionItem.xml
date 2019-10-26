@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component
+		name="Test__DivisionItem"
+		extends="DivisionItem">
+	<interface>
+		<function name="TestFramework__RunNodeTests" />
+	</interface>
+	<script
+			type="text/brightscript"
+			uri="pkg:/components/tests/DivisionItem/Test__DivisionItem_testSuite.brs" />
+	<script
+			type="text/brightscript"
+			uri="pkg:/source/framework.brs" />
+
+</component>

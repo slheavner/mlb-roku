@@ -11,6 +11,7 @@ sub init()
   m.top.layoutDirection = "vert"
   m.top.observeField("itemContent", "onDivisionChange")
   m.top.observeField("width", "onWidthChange")
+  m.teams = m.top.findNode("teams")
   m.title = m.top.findNode("divisionName")
   onWidthChange()
 end sub
@@ -19,8 +20,9 @@ sub onDivisionChange(event)
   data = event.getData()
   if data <> invalid then
     m.title.text = data.id
-    for each child in data.getChildren( - 1, 0)
-      row = m.top.createChild("TeamRow")
+    for i = 0 to data.getChildCount() - 1
+      child = data.getChild(i)
+      row = m.teams.getChild(i)
       row.itemContent = child
     end for
   end if
